@@ -1,0 +1,9 @@
+<app-header></app-header>
+<div class="painel">
+    <div class="container p-4">
+        <dx-select-box placeholder= "Selecione um Estado" [dataSource]="states" displayExpr="sigla" valueExpr="sigla" (onValueChanged)="selecionarState($event)"></dx-select-box>
+        <dx-select-box placeholder= "Selecione uma cidade" [dataSource]="city" displayExpr="nome" valueExpr="nome" (onValueChanged)="atualizarValor($event)"></dx-select-box>
+        <dx-text-area id="textArea" placeholder="{{climaResposta}}"></dx-text-area>
+        <dx-button text="Pesquisar" (click)="getClima()" ></dx-button>
+    </div>
+</div>
